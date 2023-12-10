@@ -18,7 +18,7 @@ The opossum swiftly changes its position as the game progresses, making it a cha
 - **Responsive Design:** Playable on both desktop and mobile browsers.
 
 ### Try it Out:
-Feel the thrill of this fast-paced game and test your reflexes! Play Catch The Opossum [here](#) ([provide link](https://gauravsinghgkp.github.io/Catch-the-Opossum/)).
+Feel the thrill of this fast-paced game and test your reflexes! Play Catch The Opossum ([Catch the Opossum](https://gauravsinghgkp.github.io/Catch-the-Opossum/)).
 
 ### How to Run:
 To run the game locally:
