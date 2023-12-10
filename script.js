@@ -9,7 +9,7 @@ let reStart = document.getElementById("restart-btn");
 // Level
 // Get the select element and time variable
 const levelSelect = document.getElementById('levelSelect');
-let time = 1000; // Default time
+let time = 500; // Default time
 
 // Timer 
 const timer = document.getElementById('timer');
@@ -44,23 +44,25 @@ image.addEventListener('click', won);
 function updateTime() {
     const selectedLevel = levelSelect.value;
     if (selectedLevel === 'medium') {
-        time = 500;
-    } else if (selectedLevel === 'high') {
         time = 300;
+    } else if (selectedLevel === 'high') {
+        time = 200;
     } else {
-        time = 1000; // Default to low
+        time = 500; // Default to low
     }
 }
 
 // Game Function
 function game() {
-    isGameActive = true;
-    intervalId = setInterval(() => {
-        let randomNumber = Math.floor(Math.random() * 12 + 1);
-        let hole = document.getElementById(randomNumber);
-        hole.appendChild(image);
-    }, time);
-    startTimer(30, timer);
+    if (!isGameActive) {
+        isGameActive = true;
+        intervalId = setInterval(() => {
+            let randomNumber = Math.floor(Math.random() * 12 + 1);
+            let hole = document.getElementById(randomNumber);
+            hole.appendChild(image);
+        }, time);
+        startTimer(30, timer);
+    }
 }
 
 
@@ -70,7 +72,6 @@ function gameRestart() {
     document.getElementById("1").appendChild(image);
     clearInterval(intervalId);
     clearInterval(timerId);
-
 }
 
 // Won Function
@@ -98,7 +99,7 @@ function startTimer(duration, display) {
         if (--timer < 0) {
             document.getElementById("1").appendChild(image);
             alert("Lost");
-            gameRestart()
+            gameRestart();
         }
     }, 1000);
 }
