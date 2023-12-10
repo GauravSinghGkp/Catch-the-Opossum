@@ -98,3 +98,12 @@ header {
 #restart-btn {
   background-color: #099268;
 }
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 24px;
+  }
+
+  /* Adjust other styles for smaller screens as needed */
+}
