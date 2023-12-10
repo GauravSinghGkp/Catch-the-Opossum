@@ -1,0 +1,100 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-image: linear-gradient(
+      rgba(25, 200, 10, 0.7),
+      rgba(25, 200, 10, 0.7)
+    ),
+    url(Images/ground.jpg);
+  background-size: cover;
+}
+
+/* Header Section */
+header {
+  width: 80%;
+  margin: auto;
+  padding: 0 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 20px 30px 0 rgba(20, 80, 2, 0.5);
+}
+
+/* Logo */
+#logo {
+  height: 100px;
+  width: 100px;
+}
+
+/* Level */
+#levelSelect {
+  padding: 5px 10px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Timer */
+#timer-container {
+  display: flex;
+  place-items: center;
+}
+
+/* Holes and Buttons Container */
+#container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+/* Holes Container*/
+#holes {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  row-gap: 50px;
+}
+
+/* Hole */
+.hole {
+  height: 100px;
+  width: 100px;
+  background-color: #332d27;
+  border-radius: 50%;
+}
+
+/* Buttons Container */
+#btns {
+  display: flex;
+  justify-content: center; /* Horizontally center buttons */
+  align-items: center; /* Vertically center buttons */
+  gap: 20px;
+}
+
+/* Buttons */
+.btn {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+#start-btn {
+  background-color: #e03131;
+}
+
+#restart-btn {
+  background-color: #099268;
+}
